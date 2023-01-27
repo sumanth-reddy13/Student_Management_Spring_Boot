@@ -9,7 +9,11 @@ import java.util.Map;
 @Repository
 public class StudentRepository {
 
-    Map<Integer, Student> db = new HashMap<>();
+    Map<Integer, Student> db;
+    
+    public StudentRepository() {
+        this.db = new HashMap<>();
+    }
 
     public String add_student(Student student) {
         db.put(student.getUid(), student);
